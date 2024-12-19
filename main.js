@@ -53,6 +53,7 @@ function uncheckAllCheckboxes() {
     checkboxes.forEach(checkbox => checkbox.checked = false);
     arr = [];
     uniqueArr = [];
+    localStorage.setItem("checked", JSON.stringify(uniqueArr));
     document.querySelector('#counter').innerHTML = uniqueArr.length;
 
 }
