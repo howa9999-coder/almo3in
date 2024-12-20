@@ -17,7 +17,6 @@ body{
     align-items: center;
     flex-direction: column;
     width: 100%;
-    max-width: 600px;
     font-size: 30px;
 }
 .from-to{
@@ -30,27 +29,27 @@ body{
 /* Create the custom circle */
 .circle-checkbox  span{
     display: inline-block;
-    width: 60px;   /* Customize width */
-    height: 60px;  /* Customize height */
+    width: 70px;  
+    height: 70px; 
     border: 2px solid transparent;
-    border-radius: 50%;  /* Makes it a circle */
+    border-radius: 50%;  
     margin-right: 10px;
     vertical-align: middle;
-    background-color: white;  /* Default background */
+    background-color: white;  
     transition: background-color 0.3s ease;
 }
 /* Style when checked */
 .circle-checkbox input[type="checkbox"]:checked + span {
-    background-color: rgb(114, 114, 220); /* Green when checked */
+    background-color: rgb(114, 114, 220); 
     border-color:  rgb(114, 114, 220);
 }
 
 .btn-container{
     background-color: pink;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    gap: 30px; /* Adjust gap size as needed */
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 30px;
     padding: 50px;
     border-radius: 20px;
 }
@@ -68,7 +67,7 @@ button{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 950px;
 }
 
 #colors-pal{
@@ -119,67 +118,66 @@ button{
 }
 
 
+
 /*md to sm*/
+@media(max-width: 950px){
+.info-container{
+    padding: 10px;
+}
+    .circle-checkbox  span{
+        display: inline-block;
+        width: 60px;   
+        height: 60px;  
+        margin-right: 10px;
+    }
+    .btn-container{
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 20px;
+        padding: 10px;
+    }
+    .options{
+        max-width: 700px;
+    }
+
+}
 @media(max-width: 750px){
-    /*info*/
-.info-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px;
 
+.info-container{
+    padding: 10px;
 }
     .circle-checkbox  span{
-        display: inline-block;
-        width: 40px;   /* Customize width */
-        height: 40px;  /* Customize height */
-        border: 2px solid transparent;
-        border-radius: 50%;  /* Makes it a circle */
+        width: 60px; 
+        height: 60px; 
         margin-right: 10px;
-        vertical-align: middle;
-        background-color: white;  /* Default background */
-        transition: background-color 0.3s ease;
     }
     .btn-container{
-        background-color: pink;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(8, 1fr);
-        gap: 20px; /* Adjust gap size as needed */
-        padding: 10px;
-        border-radius: 20px;
-    }
-}
-
-@media(max-width: 400px){
-    /*info*/
-.info-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px;
-
-}
-    .circle-checkbox  span{
-        display: inline-block;
-        width: 40px;   /* Customize width */
-        height: 40px;  /* Customize height */
-        border: 2px solid transparent;
-        border-radius: 50%;  /* Makes it a circle */
-        margin-right: 10px;
-        vertical-align: middle;
-        background-color: white;  /* Default background */
-        transition: background-color 0.3s ease;
-    }
-    .btn-container{
-        background-color: pink;
-        display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(9, 1fr);
-        gap: 10px; /* Adjust gap size as needed */
+        grid-template-rows: repeat(8, 1fr);
+        gap: 20px; 
         padding: 10px;
-        border-radius: 20px;
+    }
+    .options{
+        max-width: 450px;
+    }
+
+}
+
+@media(max-width: 450px){
+.info-container{
+    padding: 10px;
+}
+    .circle-checkbox  span{
+        width: 30px;   
+        height: 30px;  
+    }
+    .btn-container{
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        gap: 10px; 
+        padding: 10px;
+    }
+    .options{
+        max-width: 250px;
     }
 }
