@@ -56,6 +56,8 @@ function checkBoxesByIndexes(array, checkBoxes) {
 // Call the function
 
 checkBoxesByIndexes(uniqueArr, checkBoxes);
+document.querySelector("#counter").innerHTML = uniqueArr.length;
+
 
 
       function handleCheckBoxChange(checkBox, index) {
@@ -64,12 +66,11 @@ checkBoxesByIndexes(uniqueArr, checkBoxes);
           if (input.checked) {
               if (!uniqueArr.includes(index)) {
                   uniqueArr.push(index); 
-                  console.log(uniqueArr)
               }
           } else {
               uniqueArr = uniqueArr.filter(item => item !== index);
           }
-      
+             localStorage.setItem("checked", JSON.stringify(uniqueArr));
           document.querySelector("#counter").innerHTML = uniqueArr.length;
           localStorage.setItem("checked", JSON.stringify(uniqueArr));
       }
