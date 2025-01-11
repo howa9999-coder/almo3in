@@ -15,7 +15,7 @@
       {
         "src": "repeat.png",
         "sizes": "512x512",
-        "type": "image/ico"
+        "type": "image/png"
       }
     ]
   }
