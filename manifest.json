@@ -1,0 +1,22 @@
+{
+    "id": "index.html",
+    "name": "المعين على التكرار",
+    "short_name": "المعين على التكرار",
+    "start_url": "index.html",
+    "theme_color": "#4287f5",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "icon192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "icon512.ico",
+        "sizes": "512x512",
+        "type": "image/ico"
+      }
+    ]
+  }
+  
